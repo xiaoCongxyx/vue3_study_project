@@ -16,7 +16,6 @@
     <span>Y：{{mousePosition.mouseY}}</span>
   </div>
 </template>
-
 <script setup>
 import {ref, watch, reactive, watchEffect, computed, onMounted} from "vue";
 import CustomRef from './hooks/debunceRef';
