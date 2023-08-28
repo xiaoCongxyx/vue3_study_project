@@ -3,6 +3,7 @@ import {ref} from 'vue'
 import Test from './Test.vue'
 import CustomerRef from './CustomerRef.vue'
 import ComputedAndWatch from './ComputedAndWatch.vue'
+import AdvancedVue from "./AdvancedVue.vue";
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 let a = 15;
@@ -20,9 +21,11 @@ let groceryList = ref([
   </ul>
   <CustomerRef/>
   <ComputedAndWatch/>
+  <AdvancedVue/>
 </template>
 
 <style lang="scss">
+
 html, body, #app {
   padding: 0;
   margin: 0;
@@ -31,8 +34,11 @@ html, body, #app {
   background-color: #fff;
 
   #app {
-    overflow: hidden;
-    padding: 0 50px;
+    box-sizing: border-box;
+    //overflow: hidden;
+    padding: 50px 50px;
+    height: auto;
   }
+
 }
 </style>

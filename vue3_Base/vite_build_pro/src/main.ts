@@ -1,4 +1,10 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+// @ts-ignore
+import registerDirectives from "./directives"
 
-createApp(App).mount('#app')
+
+let app = createApp(App)
+registerDirectives(app)
+
+app.mount('#app')

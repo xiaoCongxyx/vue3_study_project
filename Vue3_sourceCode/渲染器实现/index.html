@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>渲染器实现</title>
+</head>
+<body>
+<div id="app"></div>
+<script src="renderer.js"></script>
+<script>
+
+    let vnode = h('div',{class:'xiao_cong'}, [
+        h('h1', null, '小葱香又香'),
+        h('span', null, '天下武功，唯快不破，无坚不摧')
+    ])
+
+    console.log(vnode)
+
+    mount(vnode, document.getElementById('app'))
+
+    let vnode1 = h('div',{class:'xiao_cong_xyx'}, [
+        h('h1',null,"断剑重铸之日，骑士归来之时"),
+        h('button',{
+            onclick: () => {
+                console.log('111')
+            }
+        },'+1')
+    ])
+
+    setTimeout(() => {
+        patch(vnode, vnode1)
+    },2000)
+
+</script>
+</body>
+</html>

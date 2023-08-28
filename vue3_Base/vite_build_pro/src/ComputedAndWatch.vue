@@ -20,8 +20,14 @@
 import {ref, watch, reactive, watchEffect, computed, onMounted} from "vue";
 import CustomRef from './hooks/debunceRef';
 import mousePos from './hooks/mousePos';
+import { useTitle } from './hooks/index'
 
 let mousePosition = mousePos()
+
+let titleRef = useTitle();
+setTimeout(() => {
+  titleRef.value = "重新开始学习Vue3"
+},3000)
 
 let skillFName = CustomRef('破界-')
 let skillLName = CustomRef('莫虚斩')
@@ -70,3 +76,4 @@ let changeHobby = () => {
 <style scoped>
 
 </style>
+
